@@ -13,24 +13,21 @@ bind '"\e[Z": menu-complete-backward'
 bind 'set page-completions on'
 shopt -s autocd
 
-#---------- No Category -----------#
+#------------ No Category ------------#
 alias h='cd $HOME'
 alias R='$HOME/Repositories'
 alias ..='cd ..'
-alias nano='nano -f /private/etc/nanorc'
+alias nano='nano -f /etc/nanorc'
 alias rc='nano $HOME/.bashrc'
 alias md='mdless'
 alias httpcodes=', $HOME/wordlists/http-status-codes/README.md'
-alias tm='tmux'
 alias dec64='echo $DEC | base64 -d'
-alias ins='apt-get -y install'
-alias root='sudo bash'
+alias install='apt-get -y install'
 alias f='neofetch'
-alias e='exit'
 alias gc='git clone'
 alias srv='ssh root@$SERVER'
 alias p='pwd'
-alias ni='npm install -g'
+alias ninstall='npm install -g'
 alias cupx='curl $URL -x "127.0.0.1:8080"'
 alias w='whoami'
 alias goi='go install'
@@ -48,10 +45,11 @@ alias commands='bat $HOME/Tools/Commands'
 alias c='cmatrix'
 alias root='sudo su -'
 alias cmds='nano $HOME/Repositories/Tools/Commands'
-alias rmf='rm -rf'
+alias rm='rm -rf'
 
 #------------ General Bash ------------#
 alias cd='HOME=/Users/luis'
+
 
 #------------- List Files --------------#
 alias ls='eza -F'
