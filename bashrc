@@ -3,7 +3,6 @@ if [ -z "$PS1" ]; then
 fi
 
 clear
-cd $HOME/Repositories/
 
 bind 'set colored-stats on'
 bind 'set colored-completion-prefix on'
