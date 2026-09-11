@@ -81,8 +81,7 @@ alias addk='echo "deb http://http.kali.org/kali kali-rolling main contrib non-fr
 alias push='git add .; git status; git commit -m "$(date +"%T - %d/%m/%y")"; git push'
 alias ubash='cp $HOME/.bashrc $HOME/Repositories/Bash/bashrc; cd $HOME/Repositories/Bash && push; cd $HOME/Repositories/'
 alias prep='$HOME/Repositories; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} add .; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} status; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} commit -m "$(date +"%T - %d/%m/%y" --date="6 hours ago")"; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} push;'
-alias repos='h; mkdir Repositories/; gh repo list Luisda2705 --limit 4000 | while read -r repo _; do   gh repo clone "$repo" "$repo"; done; mv Luisda2705/* $HOME/Repositories; rmf Luisda2705/; cd $HOME/Repositories'
-alias rmreps='h; rm -rf Repositories/;'
+alias repos='h; gh repo list Luisda2705 --limit 4000 | while read -r repo _; do   gh repo clone "$repo" "$repo"; done;'
 alias k='apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-upgrade && apt-get -y install kali-* && apt purge -y && apt autoremove -y'
 
 #------- Read Files and Print Route ------#
