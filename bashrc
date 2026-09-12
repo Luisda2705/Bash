@@ -43,6 +43,7 @@ alias c='cmatrix'
 alias root='sudo su -'
 alias cmds='nano $HOME/Repositories/Tools/Commands'
 alias rm='rm -rf'
+alias ll='ls -la'
 
 #------------ General Bash ------------#
 
