@@ -13,8 +13,7 @@ bind 'set page-completions on'
 shopt -s autocd
 
 #------------ No Category ------------#
-alias h='cd $HOME'
-alias R='$HOME/Repositories'
+alias h='$HOME'
 alias ..='cd ..'
 alias nano='nano -f /etc/nanorc'
 alias rc='nano $HOME/.bashrc'
@@ -35,7 +34,6 @@ alias pull='git pull'
 alias lx='su lx'
 alias brup='brew update && brew upgrade && brew cleanup'
 alias rn='netstat -rn'
-alias cpnano='cp /etc/nanorc $HOME/Tools/nanorc'
 alias we='curl wttr.in/Zacatecas'
 alias log='git log'
 alias df='df -h'
@@ -47,8 +45,6 @@ alias cmds='nano $HOME/Repositories/Tools/Commands'
 alias rm='rm -rf'
 
 #------------ General Bash ------------#
-alias cd='HOME=/Users/luis'
-
 
 #------------- List Files --------------#
 alias ls='eza -F'
@@ -79,9 +75,12 @@ alias addk='echo "deb http://http.kali.org/kali kali-rolling main contrib non-fr
 
 #-------- Update Github Repos ----------#
 alias push='git add .; git status; git commit -m "$(date +"%T - %d/%m/%y")"; git push'
-alias ubash='cp $HOME/.bashrc $HOME/Repositories/Bash/bashrc; cd $HOME/Repositories/Bash && push; cd $HOME/Repositories/'
-alias prep='$HOME/Repositories; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} add .; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} status; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} commit -m "$(date +"%T - %d/%m/%y" --date="6 hours ago")"; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} push;'
-alias repos='h; gh repo list Luisda2705 --limit 4000 | while read -r repo _; do   gh repo clone "$repo" "$repo"; done;'
+alias repos='h; mkdir Repositories/; gh repo list Luisda2705 --limit 4000 | while read -r repo _; do   gh repo clone "$repo" "$repo"; done; cd $HOME'
+
+#alias ubash='cp $HOME/.bashrc $HOME/Repositories/Bash/bashrc; cd $HOME/Repositories/Bash && push; cd $HOME/Repositories/'
+#alias prep='$HOME/Repositories; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} add .; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} status; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} commit -m "$(date +"%T - %d/%m/%y" --date="6 hours ago")"; find . -maxdepth 2 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} push;'
+
+alias rmreps='h; rm -rf Repositories/;'
 alias k='apt-get -y update && apt-get -y -f upgrade && apt-get -y -f full-upgrade && apt-get -y install kali-* && apt purge -y && apt autoremove -y'
 
 #------- Read Files and Print Route ------#
